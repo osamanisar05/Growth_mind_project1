@@ -68,7 +68,7 @@ if uploaded_files:
 
         st.subheader("Conversion options")
         conversion_type = st.radio ("convert {file.name} to:", ["cvs" , "Excel"], key = file.name)
-        if st.button("convert{file.name}")
+        if st.button("convert{file.name}"):
             buffer = BytesIO()
             if conversion_type == "csv":
                 df.to.csv(buffer, index = False)
